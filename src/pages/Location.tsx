@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { MapPin, Navigation, Car, Restaurant, ShoppingBag, Camera } from "lucide-react";
+import { MapPin, Navigation, Car, Utensils, ShoppingBag, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Map from "@/components/Map";
 
@@ -28,7 +28,7 @@ const Location = () => {
       time: "5 min drive",
       description: "Collection of high-end restaurants offering international cuisine.",
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-      icon: <Restaurant className="h-5 w-5" />
+      icon: <Utensils className="h-5 w-5" />
     },
     {
       id: "3",
