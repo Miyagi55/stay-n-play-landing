@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { MapPin, Navigation, Car, Utensils, ShoppingBag, Camera } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Map from "@/components/Map";
+import AttractionCard from "@/components/location/AttractionCard";
+import AttractionDetails from "@/components/location/AttractionDetails";
 
 const Location = () => {
   const [selectedAttraction, setSelectedAttraction] = useState<string | null>(null);
@@ -89,20 +90,12 @@ const Location = () => {
                 <h2 className="text-2xl font-serif mb-4">Nearby Attractions</h2>
                 <div className="space-y-4">
                   {attractions.map((attraction) => (
-                    <Button
+                    <AttractionCard
                       key={attraction.id}
-                      variant={selectedAttraction === attraction.id ? "secondary" : "outline"}
-                      className="w-full justify-start gap-4"
-                      onClick={() => setSelectedAttraction(attraction.id)}
-                    >
-                      {attraction.icon}
-                      <div className="text-left">
-                        <div className="font-medium">{attraction.name}</div>
-                        <div className="text-sm text-gray-600">
-                          {attraction.distance} • {attraction.time}
-                        </div>
-                      </div>
-                    </Button>
+                      {...attraction}
+                      isSelected={selectedAttraction === attraction.id}
+                      onSelect={setSelectedAttraction}
+                    />
                   ))}
                 </div>
               </div>
@@ -114,19 +107,9 @@ const Location = () => {
               </div>
 
               {selectedAttraction && (
-                <div className="bg-white rounded-lg shadow-lg p-6 animate-fade-in">
-                  <h3 className="text-xl font-serif mb-4">
-                    {attractions.find(a => a.id === selectedAttraction)?.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {attractions.find(a => a.id === selectedAttraction)?.description}
-                  </p>
-                  <img
-                    src={attractions.find(a => a.id === selectedAttraction)?.image}
-                    alt={attractions.find(a => a.id === selectedAttraction)?.name}
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
-                </div>
+                <AttractionDetails
+                  {...attractions.find(a => a.id === selectedAttraction)!}
+                />
               )}
             </div>
           </div>
