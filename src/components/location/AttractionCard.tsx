@@ -1,5 +1,7 @@
-import { LucideIcon } from "lucide-react";
+
+import { LucideIcon, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface AttractionProps {
   id: string;
@@ -30,9 +32,15 @@ const AttractionCard = ({
     <Button
       key={id}
       variant={isSelected ? "secondary" : "outline"}
-      className="w-full justify-start gap-4"
-      onClick={() => onSelect(id)}
+      className="w-full justify-start gap-4 relative"
+      onClick={() => onSelect(isSelected ? "" : id)}
     >
+      <ChevronRight 
+        className={cn(
+          "h-4 w-4 transition-transform duration-200",
+          isSelected && "rotate-90"
+        )}
+      />
       {icon}
       <div className="text-left">
         <div className="font-medium">{name}</div>
