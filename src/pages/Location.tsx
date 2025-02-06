@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -90,27 +91,23 @@ const Location = () => {
                 <h2 className="text-2xl font-serif mb-4">Nearby Attractions</h2>
                 <div className="space-y-4">
                   {attractions.map((attraction) => (
-                    <AttractionCard
-                      key={attraction.id}
-                      {...attraction}
-                      isSelected={selectedAttraction === attraction.id}
-                      onSelect={setSelectedAttraction}
-                    />
+                    <div key={attraction.id} className="space-y-4">
+                      <AttractionCard
+                        {...attraction}
+                        isSelected={selectedAttraction === attraction.id}
+                        onSelect={setSelectedAttraction}
+                      />
+                      {selectedAttraction === attraction.id && (
+                        <AttractionDetails {...attraction} />
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
-                <Map />
-              </div>
-
-              {selectedAttraction && (
-                <AttractionDetails
-                  {...attractions.find(a => a.id === selectedAttraction)!}
-                />
-              )}
+            <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <Map />
             </div>
           </div>
         </div>
