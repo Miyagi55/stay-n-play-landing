@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wifi, Coffee, Bath, Tv } from "lucide-react";
+import { AirVent, Bath, Tv, Wifi } from "lucide-react";
 
 const rooms = [
   {
@@ -54,7 +55,7 @@ const Rooms = () => {
           <h1 className="text-4xl font-serif mb-6">Our Rooms</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {rooms.map((room) => (
-              <Card key={room.id} className="overflow-hidden">
+              <Card key={room.id} className="overflow-hidden animate-fade-in">
                 <div className="relative h-64">
                   <img
                     src={room.image}
@@ -71,8 +72,8 @@ const Rooms = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex gap-2 mb-4">
+                    <AirVent className="h-5 w-5 text-gray-500" />
                     <Wifi className="h-5 w-5 text-gray-500" />
-                    <Coffee className="h-5 w-5 text-gray-500" />
                     <Bath className="h-5 w-5 text-gray-500" />
                     <Tv className="h-5 w-5 text-gray-500" />
                   </div>
