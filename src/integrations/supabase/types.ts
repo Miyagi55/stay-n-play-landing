@@ -12,15 +12,15 @@ export type Database = {
       apis_keys: {
         Row: {
           api_key: string
-          proveedor: string | null
+          proveedor: string
         }
         Insert: {
           api_key: string
-          proveedor?: string | null
+          proveedor: string
         }
         Update: {
           api_key?: string
-          proveedor?: string | null
+          proveedor?: string
         }
         Relationships: []
       }

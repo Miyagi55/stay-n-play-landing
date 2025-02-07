@@ -47,8 +47,8 @@ const Map = () => {
   };
 
   const defaultCenter = {
-    lat: 40.7128,
-    lng: -74.006,
+    lat: -2.221631582266207,
+    lng: -80.91008549147948,
   };
 
   if (isLoading) {
@@ -79,10 +79,13 @@ const Map = () => {
     <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
         mapContainerStyle={mapStyles}
-        zoom={13}
+        zoom={15}
         center={defaultCenter}
       >
-        <Marker position={defaultCenter} />
+        <Marker 
+          position={defaultCenter}
+          title="Hotel Arena Inn"
+        />
       </GoogleMap>
     </LoadScript>
   );
