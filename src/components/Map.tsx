@@ -4,10 +4,42 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { toast } from './ui/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Map = () => {
   const [apiKey, setApiKey] = useState('');
-  const [isKeySet, setIsKeySet] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchApiKey = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('apis_keys')
+          .select('api_key')
+          .eq('proveedor', 'google_maps')
+          .single();
+
+        if (error) throw error;
+        
+        if (data?.api_key) {
+          setApiKey(data.api_key);
+        }
+      } catch (err) {
+        console.error('Error fetching API key:', err);
+        setError('Failed to load Google Maps API key');
+        toast({
+          title: "Error",
+          description: "Failed to load Google Maps. Please try again later.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchApiKey();
+  }, []);
 
   const mapStyles = {
     height: '100%',
@@ -19,31 +51,26 @@ const Map = () => {
     lng: -74.006,
   };
 
-  if (!isKeySet) {
+  if (isLoading) {
+    return (
+      <div className="p-4">
+        <p className="text-sm text-gray-600">Loading map...</p>
+      </div>
+    );
+  }
+
+  if (error || !apiKey) {
     return (
       <div className="p-4 space-y-4">
         <p className="text-sm text-gray-600">
-          Please enter your Google Maps API key to view the map. You can get one at{' '}
-          <a 
-            href="https://console.cloud.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline"
-          >
-            Google Cloud Console
-          </a>
+          Please make sure you have added your Google Maps API key to Supabase with provider name "google_maps"
         </p>
-        <div className="flex gap-2">
-          <Input
-            type="text"
-            placeholder="Enter Google Maps API key"
-            value={apiKey}
-            onChange={(e) => setApiKey(e.target.value)}
-          />
-          <Button onClick={() => setIsKeySet(true)}>
-            Set Key
-          </Button>
-        </div>
+        <Button 
+          onClick={() => window.location.reload()}
+          variant="outline"
+        >
+          Retry
+        </Button>
       </div>
     );
   }
