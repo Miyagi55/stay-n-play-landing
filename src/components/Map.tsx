@@ -49,11 +49,13 @@ const Map = () => {
     try {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/light-v11',
+        style: 'mapbox://styles/mapbox/navigation-day-v1',
         center: [-80.91008549147948, -2.221631582266207], // Note: Mapbox uses [lng, lat] order
         zoom: 15,
         pitch: 45,
       });
+
+      
 
       // Add navigation controls
       map.current.addControl(

@@ -10,27 +10,27 @@ import { Textarea } from "@/components/ui/textarea";
 const reviews = [
   {
     id: 1,
-    name: "John Smith",
+    name: "Elvis Mendez",
     rating: 5,
-    date: "March 15, 2024",
-    comment: "Exceptional service and beautiful rooms. The staff went above and beyond to make our stay memorable.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    date: "Hace un año",
+    comment: "Hotel ubicado en calle principal del centro de la libertad, muy bonito, a una cuadra de la playa de La Libertad, consta con almacenes cerca y un gran tía frente al hotel, centro de la libertad y de toda la actividad comercial.",
+    image: "reviews/review_elvis.png",
   },
   {
     id: 2,
-    name: "Emma Wilson",
+    name: "Stephanie Espinoza Delgado",
     rating: 4.5,
-    date: "March 10, 2024",
-    comment: "Lovely hotel with great amenities. The location is perfect for exploring the city.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    date: "Hace 6 meses",
+    comment: "Un lugar muy cómodo para pasarla muy bien en vacaciones con amigos o familia.",
+    image: "reviews/silvia_review.png",
   },
   {
     id: 3,
-    name: "Michael Brown",
-    rating: 5,
-    date: "March 5, 2024",
-    comment: "Outstanding experience! The room was spotless and the view was breathtaking.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    name: "Francisco Ayon",
+    rating: 4,
+    date: "Hace 3 meses",
+    comment: "Lugar bonito y barato muy acogedor y buena atención",
+    image: "reviews/review3.png",
   },
 ];
 
@@ -58,7 +58,7 @@ const Reviews = () => {
       <Header />
       <main className="flex-grow pt-20">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-serif mb-6">Guest Reviews</h1>
+          <h1 className="text-4xl font-serif mb-6">Testimonios de nuestros huéspedes</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {reviews.map((review) => (
@@ -82,22 +82,7 @@ const Reviews = () => {
             ))}
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <Card>
-              <CardHeader>
-                <h2 className="text-2xl font-serif">Write a Review</h2>
-              </CardHeader>
-              <CardContent>
-                <Textarea
-                  placeholder="Share your experience..."
-                  value={newReview}
-                  onChange={(e) => setNewReview(e.target.value)}
-                  className="mb-4"
-                />
-                <Button>Submit Review</Button>
-              </CardContent>
-            </Card>
-          </div>
+          
         </div>
       </main>
       <Footer />

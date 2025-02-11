@@ -8,45 +8,45 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-serif mb-4">Contact Us</h3>
+            <h3 className="text-xl font-serif mb-4">Contáctanos</h3>
             <div className="space-y-2">
               <p className="flex items-center">
                 <Phone size={16} className="mr-2" />
-                +1 234 567 890
+                Teléfono fijo (+593) 04 660 0003
               </p>
               <p className="flex items-center">
                 <Mail size={16} className="mr-2" />
-                info@luxuryhotel.com
+                gery_delacruz@gmail.com
               </p>
               <p className="flex items-center">
-                <MapPin size={16} className="mr-2" />
-                123 Luxury Street, City
+                <MapPin size={30} className="mr-2" />
+                Santa Elena, La Libertad, Av. 9 de Octubre 533 y calle Guayaquil
               </p>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-serif mb-4">Quick Links</h3>
+            <h3 className="text-xl font-serif mb-4">Links de página</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-secondary transition-colors">
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li>
                 <Link to="/rooms" className="hover:text-secondary transition-colors">
-                  Rooms
+                  Habitaciones
                 </Link>
               </li>
               <li>
                 <Link to="/location" className="hover:text-secondary transition-colors">
-                  Location
+                  Ubicación
                 </Link>
               </li>
               <li>
                 <Link to="/reviews" className="hover:text-secondary transition-colors">
-                  Reviews
+                  Testimonios
                 </Link>
               </li>
             </ul>
@@ -54,10 +54,10 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="text-xl font-serif mb-4">Follow Us</h3>
+            <h3 className="text-xl font-serif mb-4">Síguenos</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/HOTELARENAINN"
                 className="hover:text-secondary transition-colors"
                 aria-label="Facebook"
               >
@@ -70,38 +70,14 @@ const Footer = () => {
               >
                 <Instagram size={24} />
               </a>
-              <a
-                href="#"
-                className="hover:text-secondary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={24} />
-              </a>
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-xl font-serif mb-4">Newsletter</h3>
-            <p className="mb-4">Subscribe to our newsletter for special offers</p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="px-4 py-2 rounded-l text-gray-800 w-full"
-              />
-              <button
-                type="submit"
-                className="bg-secondary px-4 py-2 rounded-r hover:bg-secondary/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
-          <p>&copy; 2024 Luxury Hotel. All rights reserved.</p>
+          <p>&copy; 2025 Hotel Arena Inn. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

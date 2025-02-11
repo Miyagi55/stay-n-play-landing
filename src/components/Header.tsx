@@ -12,25 +12,25 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="text-2xl font-serif text-primary">
-            Luxury Hotel
+            Hotel Arena Inn
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-secondary transition-colors">
-              Home
+              Inicio
             </Link>
             <Link to="/rooms" className="text-gray-600 hover:text-secondary transition-colors">
-              Rooms
+              Habitaciones
             </Link>
             <Link to="/location" className="text-gray-600 hover:text-secondary transition-colors">
-              Location
+              Ubicación
             </Link>
             <Link to="/reviews" className="text-gray-600 hover:text-secondary transition-colors">
-              Reviews
+              Testimonios
             </Link>
             <Link to="/contact" className="text-gray-600 hover:text-secondary transition-colors">
-              Contact
+              Contacto
             </Link>
           </nav>
 
@@ -53,35 +53,35 @@ const Header = () => {
                 className="text-gray-600 hover:text-secondary transition-colors"
                 onClick={toggleMenu}
               >
-                Home
+                Inicio
               </Link>
               <Link
                 to="/rooms"
                 className="text-gray-600 hover:text-secondary transition-colors"
                 onClick={toggleMenu}
               >
-                Rooms
+                Habitaciones
               </Link>
               <Link
                 to="/location"
                 className="text-gray-600 hover:text-secondary transition-colors"
                 onClick={toggleMenu}
               >
-                Location
+                Ubicación
               </Link>
               <Link
                 to="/reviews"
                 className="text-gray-600 hover:text-secondary transition-colors"
                 onClick={toggleMenu}
               >
-                Reviews
+                Testimonios
               </Link>
               <Link
                 to="/contact"
                 className="text-gray-600 hover:text-secondary transition-colors"
                 onClick={toggleMenu}
               >
-                Contact
+                Contacto
               </Link>
             </div>
           </nav>

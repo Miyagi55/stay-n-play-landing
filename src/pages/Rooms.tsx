@@ -10,39 +10,35 @@ import { AirVent, Bath, Tv, Wifi } from "lucide-react";
 const rooms = [
   {
     id: 1,
-    name: "Deluxe Suite",
-    description: "Spacious suite with city view",
-    price: "$299",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427",
-    amenities: ["King Size Bed", "Free WiFi", "Mini Bar", "Smart TV"],
-    size: "45m²",
+    name: "Habitación simple",
+    description: "Habitación amplia con escritorio",
+    price: "$15",
+    image: "rooms/habitacion_simple.jpg",
+    amenities: ["Cama de dos plazas", "WiFi", "Aire acondicionado", "Smart TV","Baño privado"],
   },
   {
     id: 2,
-    name: "Executive Room",
-    description: "Modern room with workspace",
-    price: "$199",
-    image: "https://images.unsplash.com/photo-1591088398332-8a7791972843",
-    amenities: ["Queen Size Bed", "Free WiFi", "Work Desk", "Coffee Maker"],
-    size: "35m²",
+    name: "Habitación doble",
+    description: "Habitación amplia con dos camas",
+    price: "$30",
+    image: "rooms/habitacion_doble.jpg",
+    amenities: ["Dos camas de dos plazas", "WiFi", "Aire acondicionado", "Smart TV","Baño privado"],
   },
   {
     id: 3,
-    name: "Family Suite",
-    description: "Perfect for families",
-    price: "$399",
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a",
-    amenities: ["2 Queen Beds", "Free WiFi", "Kitchen", "2 Bathrooms"],
-    size: "65m²",
+    name: "Habitación familiar",
+    description: "Amplia habitación para familias o grupos de trabajo",
+    price: "$60",
+    image: "rooms/familiar.jpg",
+    amenities: ["2 Camas y una litera", "WiFi", "Aire acondicionado", "Smart TV","Baño privado"],
   },
   {
     id: 4,
-    name: "Standard Room",
-    description: "Comfortable and cozy",
-    price: "$149",
-    image: "https://images.unsplash.com/photo-1505693314120-0d443867891c",
-    amenities: ["Queen Size Bed", "Free WiFi", "TV", "Shower"],
-    size: "25m²",
+    name: "Habitación matrimonial",
+    description: "Confortable, aislada y privada",
+    price: "$30",
+    image: "rooms/matrimonial.jpg",
+    amenities: ["Cama de dos plazas", "WiFi", "Aire acondicionado", "Smart TV","Baño privado"],
   },
 ];
 
@@ -52,7 +48,7 @@ const Rooms = () => {
       <Header />
       <main className="flex-grow pt-20">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-serif mb-6">Our Rooms</h1>
+          <h1 className="text-4xl font-serif mb-6">Nuestras habitaciones</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {rooms.map((room) => (
               <Card key={room.id} className="overflow-hidden animate-fade-in">
@@ -78,7 +74,6 @@ const Rooms = () => {
                     <Tv className="h-5 w-5 text-gray-500" />
                   </div>
                   <div className="space-y-2">
-                    <p className="text-sm text-gray-500">Room Size: {room.size}</p>
                     <ul className="text-sm text-gray-500 list-disc list-inside">
                       {room.amenities.map((amenity, index) => (
                         <li key={index}>{amenity}</li>

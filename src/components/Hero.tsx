@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1470&q=80",
-  "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1470&q=80",
-  "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1470&q=80",
+  "/images_for_hero/foto01.jpg",
+  "/images_for_hero/foto02.jpg",
+  "/images_for_hero/foto03.jpg",
+  "/images_for_hero/foto04.jpg",
+  "/images_for_hero/foto05.jpg"
 ];
 
 const Hero = () => {
@@ -48,13 +50,14 @@ const Hero = () => {
       <div className="relative h-full flex items-center justify-center text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
-            Welcome to Luxury Living
+            Bienvenido al Hotel Arena Inn
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Experience unparalleled comfort and elegance in the heart of the city
+            En el corazón de La Libertad
           </p>
-          <button className="bg-secondary text-white px-8 py-3 rounded hover:bg-secondary/90 transition-colors">
-            Book Now
+          <button onClick={() => window.open("https://wa.me/593993299022", "_blank")}
+          className="bg-secondary text-white px-8 py-3 rounded hover:bg-secondary/90 transition-colors">
+            Reserva ahora
           </button>
         </div>
       </div>
