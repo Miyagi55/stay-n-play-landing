@@ -11,22 +11,17 @@ interface AttractionDetailsProps {
   name: string;
   description: string;
   image: string;
+  images?: string[];
 }
 
-const AttractionDetails = ({ name, description, image }: AttractionDetailsProps) => {
-  const galleryImages = [
-    image,
-    "https://images.unsplash.com/photo-1533929736458-ca588d08c8be",
-    "https://images.unsplash.com/photo-1554254648-2d58a1bc3fd5",
-  ];
-
+const AttractionDetails = ({ name, description, images = [] }: AttractionDetailsProps) => {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 animate-fade-in">
       <h3 className="text-xl font-serif mb-4">{name}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <Carousel className="w-full">
         <CarouselContent>
-          {galleryImages.map((img, index) => (
+          {images.map((img, index) => (
             <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <img

@@ -19,6 +19,11 @@ const Location = () => {
       distance: "100 metros",
       time: "3 min caminando",
       description: "Un malecón renovado con variedad de sitios gastrónomicos y una amplia playa segura y tranquila.",
+      images: [
+        "images_for_attractions/beach/playa_dia.jpg",
+        "images_for_attractions/beach/malecon.jpg",
+        "images_for_attractions/beach/playa_noche.jpg"
+      ],
       image: "images_for_attractions/beach/playa_dia.jpg",
       icon: <Sun className="h-5 w-5" />
     },
@@ -29,6 +34,11 @@ const Location = () => {
       distance: "2 km",
       time: "5 min drive",
       description: "Centro comercial con variedad de restaurantes y tiendas, cuenta con un Supercines.",
+      images: [
+        "images_for_attractions/shopping/paseo.jpg",
+        "images_for_attractions/shopping/supercines.jpeg",
+        "images_for_attractions/shopping/supercines2.jpeg"
+      ],
       image: "images_for_attractions/shopping/paseo.jpg",
       icon: <ShoppingBag className="h-5 w-5" />
     },
@@ -39,6 +49,11 @@ const Location = () => {
       distance: "100 metros",
       time: "3 minutos caminando",
       description: "Museo que cuenta la historia del Cantón La Libertad.",
+      images: [
+        "images_for_attractions/museum/museo_playa.jpg",
+        "images_for_attractions/museum/museo.jpg",
+        "images_for_attractions/museum/museo1.jpg"
+      ],
       image: "images_for_attractions/museum/museo_playa.jpg",
       icon: <Landmark className="h-5 w-5" />
     },
@@ -49,6 +64,11 @@ const Location = () => {
       distance: "12 km",
       time: "30 minutos en auto",
       description: "Hermoso mirador con vista panorámica de la Península.",
+      images: [
+        "images_for_attractions/mirador/Puntilla1.jpg",
+        "images_for_attractions/mirador/chocolatera.jpg",
+        "images_for_attractions/mirador/puntilla2.jpeg"
+      ],
       image: "images_for_attractions/mirador/Puntilla1.jpg",
       icon: <Camera className="h-5 w-5" />
     }
@@ -98,7 +118,7 @@ const Location = () => {
                         onSelect={setSelectedAttraction}
                       />
                       {selectedAttraction === attraction.id && (
-                        <AttractionDetails {...attraction} />
+                        <AttractionDetails {...attraction} images={attraction.images} />
                       )}
                     </div>
                   ))}
