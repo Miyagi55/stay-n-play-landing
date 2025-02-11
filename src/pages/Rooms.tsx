@@ -62,7 +62,7 @@ const Rooms = () => {
                 <CardHeader>
                   <div className="flex justify-between items-center">
                     <CardTitle className="text-2xl font-serif">{room.name}</CardTitle>
-                    <span className="text-2xl font-bold text-primary">{room.price}<span className="text-sm text-gray-500">/night</span></span>
+                    <span className="text-2xl font-bold text-primary">{room.price}<span className="text-sm text-gray-500">/noche</span></span>
                   </div>
                   <CardDescription>{room.description}</CardDescription>
                 </CardHeader>
@@ -82,7 +82,14 @@ const Rooms = () => {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full">Book Now</Button>
+                  <a
+                    href={`https://wa.me/593993299022?text=Hola, me gustaría reservar la ${room.name}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
+                    <Button className="w-full">Reserva ahora</Button>
+                  </a>
                 </CardFooter>
               </Card>
             ))}

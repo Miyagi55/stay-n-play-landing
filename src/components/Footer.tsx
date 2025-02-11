@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-serif mb-4">Contáctanos</h3>
@@ -72,8 +73,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center">

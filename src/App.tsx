@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import Location from "./pages/Location";
 import Rooms from "./pages/Rooms";
 import Reviews from "./pages/Reviews";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,7 +30,6 @@ const AnimatedRoutes = () => {
           <Route path="/location" element={<Location />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/reviews" element={<Reviews />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </motion.div>

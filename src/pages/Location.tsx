@@ -25,7 +25,7 @@ const Location = () => {
     {
       id: "2",
       name: "Centro Comercial Paseo Shopping",
-      type: "Restaurants",
+      type: "Shopping",
       distance: "2 km",
       time: "5 min drive",
       description: "Centro comercial con variedad de restaurantes y tiendas, cuenta con un Supercines.",
@@ -35,7 +35,7 @@ const Location = () => {
     {
       id: "3",
       name: "Museo de La Libertad",
-      type: "Shopping",
+      type: "Museum",
       distance: "100 metros",
       time: "3 minutos caminando",
       description: "Museo que cuenta la historia del Cantón La Libertad.",
@@ -48,7 +48,7 @@ const Location = () => {
       type: "Tourist Spot",
       distance: "12 km",
       time: "30 minutos en auto",
-      description: "Hermoso mirador con vista panorámica de la Península.",
+      description: "Hermoso mirador con vista panorámica de la Península.",
       image: "images_for_attractions/mirador/Puntilla1.jpg",
       icon: <Camera className="h-5 w-5" />
     }
