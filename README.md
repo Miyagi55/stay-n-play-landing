@@ -2,68 +2,42 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/c3b5af49-3d2d-441b-9fb8-77b2c1c03bcb
+**URL**: https://hotelarenainn.netlify.app/
 
-## How can I edit this code?
+# Hotel Website
 
-There are several ways of editing your application.
+This is the official website for a small local hotel. The initial codebase and concept were generated entirely with [Lovable](https://lovable.tech), after which the repository was imported and manually modified to refine the source code and customize into the client preferences.
 
-**Use Lovable**
+## Technologies Used
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c3b5af49-3d2d-441b-9fb8-77b2c1c03bcb) and start prompting.
+This project is built with:
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Vite](https://vitejs.dev/) - Fast and modern frontend tooling
+- [TypeScript](https://www.typescriptlang.org/) - Statically typed JavaScript
+- [React](https://react.dev/) - Component-based UI framework
+- [shadcn/ui](https://ui.shadcn.com/) - Beautifully designed components
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To set up the project locally, follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <repository-url>
+cd <project-folder>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Contributing
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If you'd like to contribute, feel free to fork the repository and submit a pull request with your improvements.
 
-**Use GitHub Codespaces**
+## License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c3b5af49-3d2d-441b-9fb8-77b2c1c03bcb) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the [MIT License](LICENSE).
